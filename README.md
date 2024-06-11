@@ -358,7 +358,6 @@ Version 0.0.1
   - Damage is not displayed if either pokemon has zero HP remaining
 - Slot machine coin counter runs twice as fast
 - Interaction of slot reel modes tweaked for better gameplay
-- The surfboard, a nugget, and TM 15 are hidden items added to the vermilion dock
 - Blaine has a touched-up battle sprite so he doesn't look like an alien
   - Snagged this off reddit, but original artist unknown (let me know if this is yours)
 - L: block doesn't disappear when level hits three digits
