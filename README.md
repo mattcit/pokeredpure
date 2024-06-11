@@ -1,8 +1,63 @@
 # Pokémon Pure Red
 
-Version 0.0.1
+Version 0.0.0
 
 [Forked from jojobear13/shinpokered](https://github.com/jojobear13/shinpokered/tree/lite) (lite branch for bug fixes only)
+
+The purpose of this rom hack is to implement bug fixes and subtle changes to improve balancing, reduce annoying gen 1 quirks, and to ultimately make the game more enjoyable to replay (especially for experienced players and for challenge runs like Nuzlocke etc).
+
+Here is a list of all the issues that will be addressed, and how they will be "fixed".
+
+Note: Any issues that are crossed out have already been implemented. The rest are still being worked on. More issues made be added down the road as well.
+
+#Main Issues:
+
+POKEMON
+- Early game Pokemon selection is bad
+  - Example: Every time you start a new game, you're either forced to catch and use Pidgeys/Rattatas etc every time, or to just avoid catching any other Pokemon until later in the game when there are more options
+  - Solution: Added more wild Pokemon variety to early game routes
+- You can't complete the Pokedex without trading
+  - Solution: Make all 151 Pokemon available without trading (includes changing trade evolutions)
+
+MOVES
+- Most Pokemon have terrible movesets (especially low level Pokemon)
+  - Example: Most low level Pokemon don't even know any STAB moves, making early game battles super boring
+  - Solution: All Pokemon movesets have been updated so that every Pokemon starts with a low level STAB move, and will always learn better STAB moves as they level up
+- Moves are not balanced between Types
+  - Example: There are no low level Ground type moves, and no high level Bug type moves
+  - Solution: Added in moves from other generations to balance out each type--also adjusted some original moves to balance as well
+- Some moves are too powerful early game (especially for Nuzlocke runs)
+  - Example: Moves that do static damage like Sonicboom and Dragon Rage
+  - Solution: Make sure no Pokemon can learn those moves too early
+
+DIFFICULTY
+- Gym leaders/Elite Four aren't much of a challenge
+  - Example: Most Gym leaders have single-type teams and can be defeated with a single Pokemon
+  - Solution: Add some variety/counter type Pokemon to each Gym leader team to make them slightly more difficult (give Brock a Vulpix to counter Grass types etc)
+- Trainers are generally weak and very repetitive
+  - Example: Many trainers have single-type teams, or are just very repetitive with the Pokemon they use
+  - Solution: Make slight changes to trainers with single-type or repetitive teams
+- Trainer AI is bad/broken
+  - Example: Trainers will use moves that have no effect, or just make really stupid decisions in general
+  - Solution: Use shinpokered's improved trainer AI
+
+FRUSTRATING MECHANICS
+- Grinding low level Pokemon is tedious
+  - Example: Exp All gives out barely any experience, making it practically useless
+  - Solution: Use shinpokered's improved Exp All
+- TMs aren't reusable and HM moves can't be forgotten
+  - Solution: TMs are reusable and HM moves can be forgotten
+- HM moves aren't balanced
+  - Example: Surf is actually a really good Water type move, but the rest of the HM moves are not good
+  - Solution: Make the other HM moves better/more useful
+
+#Minor Issues:
+- Cycling Road guards can be bypassed to enter Cycling Road without a Bicycle
+  - Solution: Player can no longer bypass the guards
+
+Changes Made to shinpokered:
+- Removed hidden items that were added to Vermilion Dock
+
 
 #Bugfixes from shinpokered
 -----------
@@ -586,40 +641,5 @@ Version 0.0.1
 
 #Credits / Special Thanks
 --------------------------
-- Jojobear13's wife, for copywriting and voicework
+- Jojobear13 for creating shinpokered
 - The Pret team for the pokered and pokeyellow disassemblies and all the code comments that came with them
-- MoriyaFaith's pokejp project for green version assets and code referencing
-- Rangi for the tool Polished Map and the jp-style town map from Red/Blue Star
-- Exp bar coded by Danny-E 33
-- The Pokemon Prism team for the improved RNG used in this project's previous versions
-- Patrik Rak for the new xor-shift RNG code
-- Move deleter/relearner coded by TheFakeMateo for Pokemon Red++
-- Code contributions and bugfixing by wisp92
-- GLSWV for correcting the metric conversions of height and weight data 
-- SteppoBlazer for the spaceworld-style old man back sprite
-- Poketto for the spaceworld-style Trainer Red back sprite
-- SPazzzi95 for documenting localization changes
-- easyaspi314 for optimizations to the gamma shader and wavy-line animation bugfix
-- Dracrius' pocketrgb-en project for finding corrections to jp-build inaccuracies
-- powderpup for box covers using Sugimori cardass art
-
-The following folks for their great tutorials, glitch videos, and explanations across the internet
-- TheFakeMateo 
-- Crystal_
-- ChickasaurusGL
-- v0id19
-
-The following folks for bugfix collaberation
-- kadetPirx
-- JOBOalthor1992
-- krazsen
-- kmalove
-- zycain
-- jastolze007 
-- MStern
-- TSinnohTrainer 
-- Chirutalis 
-- coltongit
-
-  
-The shinpokered repository was branched from pret/pokered at [merge pull request #185 committed on Jul 2, 2018](https://github.com/pret/pokered/tree/c8599831992c91e521cf1d467ccae3d9498e42ef)
