@@ -2,7 +2,7 @@
 
 Version 0.0.0
 
-[Forked from jojobear13/shinpokered](https://github.com/jojobear13/shinpokered/tree/lite) (lite branch for bug fixes only)
+[Forked from jojobear13/shinpokered](https://github.com/jojobear13/shinpokered/tree/lite) (lite branch for bug fixes and improved AI only)
 
 The purpose of this rom hack is to implement bug fixes and subtle changes to improve balancing, reduce annoying gen 1 quirks, and to ultimately make the game more enjoyable to replay (especially for experienced players and for challenge runs like Nuzlocke etc).
 
