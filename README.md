@@ -4,7 +4,11 @@ Version 0.0.0
 
 [Forked from jojobear13/shinpokered](https://github.com/jojobear13/shinpokered/tree/lite) (lite branch for bug fixes and improved AI only)
 
-The purpose of this rom hack is to implement bug fixes and subtle changes to the original Pokemon Red Version to: improve balancing, reduce annoying gen 1 quirks, and to ultimately make the game more enjoyable to replay (especially for experienced players and for challenge runs like Nuzlocke etc).
+The purpose of this rom hack is to implement bug fixes and subtle changes to the original Pokemon Red Version to:
+- improve balancing
+- reduce annoying gen 1 quirks
+  
+...and to ultimately make the game more enjoyable to replay (especially for experienced players and for challenge runs like Nuzlocke etc).
 
 Unlike many other rom hacks, the goal is to try to make sure that all changes are as subtle as possible, in order to try and maintain the original feel of the generation 1 games as best as possible. Essentially, the goal is to fix some of the bigger issues that cause the original game to be frustrating to play, while still respecting the original version.
 
