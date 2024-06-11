@@ -15,18 +15,18 @@ Main Issues:
 
 **POKEMON**
 - Early game Pokemon selection is bad
-  - Example: Every time you start a new game, you're either forced to catch and use Pidgeys/Rattatas etc every time, or to just avoid catching any other Pokemon until later in the game when there are more options
-  - Solution: Added more wild Pokemon variety to early game routes
+  - Example: Every time you start a new game, you're either forced to catch and use Pidgeys/Rattatas etc, or to just avoid catching any other Pokemon until later in the game when there are more options
+  - Solution: Add more wild Pokemon variety to early game routes
 - You can't complete the Pokedex without trading
   - Solution: Make all 151 Pokemon available without trading (includes changing trade evolutions)
 
 **MOVES**
 - Most Pokemon have terrible movesets (especially low level Pokemon)
   - Example: Most low level Pokemon don't even know any STAB moves, making early game battles super boring
-  - Solution: All Pokemon movesets have been updated so that every Pokemon starts with a low level STAB move, and will always learn better STAB moves as they level up
+  - Solution: Update all Pokemon movesets so that every Pokemon starts with a low level STAB move, and will always learn better STAB moves as they level up
 - Moves are not balanced between Types
   - Example: There are no low level Ground type moves, and no high level Bug type moves
-  - Solution: Added in moves from other generations to balance out each type--also adjusted some original moves to balance as well
+  - Solution: Add in moves from other generations to balance out each type--also adjust some original moves for balancing
 - Some moves are too powerful early game (especially for Nuzlocke runs)
   - Example: Moves that do static damage like Sonicboom and Dragon Rage
   - Solution: Make sure no Pokemon can learn those moves too early
@@ -50,13 +50,13 @@ Main Issues:
   - Example: Exp All gives out barely any experience, making it practically useless
   - Solution: Use shinpokered's improved Exp All
 - TMs aren't reusable and HM moves can't be forgotten
-  - Solution: TMs are reusable and HM moves can be forgotten
+  - Solution: Make TMs reusable and allow HM moves to be forgotten
 
 
 Minor Issues:
 -----------
 - Cycling Road guards can be bypassed to enter Cycling Road without a Bicycle
-  - Solution: Player can no longer bypass the guards
+  - Solution: Fix both scripts so that the player can no longer bypass the guards
 
 
 Changes Made to shinpokered:
