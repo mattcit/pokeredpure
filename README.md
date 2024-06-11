@@ -1,4 +1,4 @@
-# Pokémon Pure Red
+# Pokémon Red Renewed Version
 
 Version 0.0.0
 
