@@ -84,7 +84,6 @@ HiddenObjectMaps:
 	db VERMILION_CITY
 	db CERULEAN_CITY
 	db ROUTE_4
-	db VERMILION_DOCK
 	db $FF
 
 HiddenObjectPointers:
@@ -174,7 +173,6 @@ HiddenObjectPointers:
 	dw VermilionCityHiddenObjects
 	dw CeruleanCityHiddenObjects
 	dw Route4HiddenObjects
-	dw VermilionDockHiddenObjects
 
 ; format: y-coord, x-coord, text id/item id, object routine
 TradeCenterHiddenObjects:
