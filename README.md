@@ -4,7 +4,9 @@ Version 0.0.0
 
 [Forked from jojobear13/shinpokered](https://github.com/jojobear13/shinpokered/tree/lite) (lite branch for bug fixes and improved AI only)
 
-The purpose of this rom hack is to implement bug fixes and subtle changes to improve balancing, reduce annoying gen 1 quirks, and to ultimately make the game more enjoyable to replay (especially for experienced players and for challenge runs like Nuzlocke etc).
+The purpose of this rom hack is to implement bug fixes and subtle changes to the original Pokemon Red Version to: improve balancing, reduce annoying gen 1 quirks, and to ultimately make the game more enjoyable to replay (especially for experienced players and for challenge runs like Nuzlocke etc).
+
+Unlike many other rom hacks, the goal is to try to make sure that all changes are as subtle as possible, in order to try and maintain the original feel of the generation 1 games as best as possible. Essentially, the goal is to fix some of the bigger issues that cause the original game to be frustrating to play, while still respecting the original version.
 
 Here is a list of all the issues that will be addressed, and how they will be "fixed".
 
@@ -16,12 +18,12 @@ Main Issues:
 **POKEMON**
 - Early game Pokemon selection is bad
   - Example: Every time you start a new game, you're either forced to catch and use Pidgeys/Rattatas etc, or to just avoid catching any other Pokemon until later in the game when there are more options
-  - Solution: Add more wild Pokemon variety to early game routes
+  - Solution: Add more wild Pokemon variety to early game routes (within reason)
 - You can't complete the Pokedex without trading
-  - Solution: Make all 151 Pokemon available without trading (includes changing trade evolutions)
+  - Solution: Make all 151 Pokemon available without trading (includes changing trade evolutions to level up evolutions)
 
 **MOVES**
-- Most Pokemon have terrible movesets (especially low level Pokemon)
+- Many Pokemon have terrible movesets (especially low level Pokemon)
   - Example: Most low level Pokemon don't even know any STAB moves, making early game battles super boring
   - Solution: Update all Pokemon movesets so that every Pokemon starts with a low level STAB move, and will always learn better STAB moves as they level up
 - Moves are not balanced between Types
@@ -30,25 +32,25 @@ Main Issues:
 - Some moves are too powerful early game (especially for Nuzlocke runs)
   - Example: Moves that do static damage like Sonicboom and Dragon Rage
   - Solution: Make sure no Pokemon can learn those moves too early
-- HM moves aren't balanced
-  - Example: Surf is actually a really good Water type move, but the rest of the HM moves are not good
-  - Solution: Make the other HM moves better/more useful
+- HM moves aren't balanced, and are generally never used in battle
+  - Example: Surf is actually a really good Water type move, but the rest of the HM moves are easily outclassed (or practically useless)
+  - Solution: Make all HM moves better/more useful in battle
 
 **DIFFICULTY**
 - Gym leaders/Elite Four aren't much of a challenge
-  - Example: Most Gym leaders have single-type teams and can be defeated with a single Pokemon
-  - Solution: Add some variety/counter type Pokemon to each Gym leader team to make them slightly more difficult (give Brock a Vulpix to counter Grass types etc)
+  - Example: Most Gym leaders have single-type teams and can be defeated with a single Pokemon of the opposing type
+  - Solution: Add some variety/counter-type Pokemon to each Gym leader/Elite Four team to make them slightly more difficult (give Brock a Vulpix to counter Grass types etc)
 - Trainers are generally weak and very repetitive
   - Example: Many trainers have single-type teams, or are just very repetitive with the Pokemon they use
-  - Solution: Make slight changes to trainers with single-type or repetitive teams
+  - Solution: Make slight changes to all trainers with single-type or repetitive teams
 - Trainer AI is bad/broken
-  - Example: Trainers will use moves that have no effect, or just make really stupid decisions in general
+  - Example: Trainers will continually use moves that have no effect, or just make really stupid decisions in general
   - Solution: Use shinpokered's improved trainer AI
 
 **FRUSTRATING MECHANICS**
 - Grinding low level Pokemon is tedious
   - Example: Exp All gives out barely any experience, making it practically useless
-  - Solution: Use shinpokered's improved Exp All
+  - Solution: Use shinpokered's improved Exp All and make sure the player can access it fairly early in game
 - TMs aren't reusable and HM moves can't be forgotten
   - Solution: Make TMs reusable and allow HM moves to be forgotten
 
