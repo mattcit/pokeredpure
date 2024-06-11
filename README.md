@@ -2,7 +2,7 @@
 
 Version 0.0.0
 
-[Forked from jojobear13/shinpokered](https://github.com/jojobear13/shinpokered/tree/lite) (only using the 'lite' branch for bug fixes and improved AI only)
+[Forked from jojobear13/shinpokered](https://github.com/jojobear13/shinpokered/tree/lite) (used the 'lite' branch for bug fixes and improved AI only)
 
 The purpose of this rom hack is to implement bug fixes and subtle changes to the original Pokemon Red Version to:
 - improve balancing
