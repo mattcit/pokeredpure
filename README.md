@@ -8,18 +8,19 @@ The purpose of this rom hack is to implement bug fixes and subtle changes to imp
 
 Here is a list of all the issues that will be addressed, and how they will be "fixed".
 
-Note: Any issues that are crossed out have already been implemented. The rest are still being worked on. More issues made be added down the road as well.
+*Note: Any issues that are crossed out have already been implemented. The rest are still being worked on. More issues may also be added in the future.*
 
-#Main Issues:
+Main Issues:
+-----------
 
-POKEMON
+**POKEMON**
 - Early game Pokemon selection is bad
   - Example: Every time you start a new game, you're either forced to catch and use Pidgeys/Rattatas etc every time, or to just avoid catching any other Pokemon until later in the game when there are more options
   - Solution: Added more wild Pokemon variety to early game routes
 - You can't complete the Pokedex without trading
   - Solution: Make all 151 Pokemon available without trading (includes changing trade evolutions)
 
-MOVES
+**MOVES**
 - Most Pokemon have terrible movesets (especially low level Pokemon)
   - Example: Most low level Pokemon don't even know any STAB moves, making early game battles super boring
   - Solution: All Pokemon movesets have been updated so that every Pokemon starts with a low level STAB move, and will always learn better STAB moves as they level up
@@ -29,8 +30,11 @@ MOVES
 - Some moves are too powerful early game (especially for Nuzlocke runs)
   - Example: Moves that do static damage like Sonicboom and Dragon Rage
   - Solution: Make sure no Pokemon can learn those moves too early
+- HM moves aren't balanced
+  - Example: Surf is actually a really good Water type move, but the rest of the HM moves are not good
+  - Solution: Make the other HM moves better/more useful
 
-DIFFICULTY
+**DIFFICULTY**
 - Gym leaders/Elite Four aren't much of a challenge
   - Example: Most Gym leaders have single-type teams and can be defeated with a single Pokemon
   - Solution: Add some variety/counter type Pokemon to each Gym leader team to make them slightly more difficult (give Brock a Vulpix to counter Grass types etc)
@@ -41,21 +45,22 @@ DIFFICULTY
   - Example: Trainers will use moves that have no effect, or just make really stupid decisions in general
   - Solution: Use shinpokered's improved trainer AI
 
-FRUSTRATING MECHANICS
+**FRUSTRATING MECHANICS**
 - Grinding low level Pokemon is tedious
   - Example: Exp All gives out barely any experience, making it practically useless
   - Solution: Use shinpokered's improved Exp All
 - TMs aren't reusable and HM moves can't be forgotten
   - Solution: TMs are reusable and HM moves can be forgotten
-- HM moves aren't balanced
-  - Example: Surf is actually a really good Water type move, but the rest of the HM moves are not good
-  - Solution: Make the other HM moves better/more useful
 
-#Minor Issues:
+
+Minor Issues:
+-----------
 - Cycling Road guards can be bypassed to enter Cycling Road without a Bicycle
   - Solution: Player can no longer bypass the guards
 
+
 Changes Made to shinpokered:
+-----------
 - Removed hidden items that were added to Vermilion Dock
 
 
