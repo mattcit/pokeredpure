@@ -1,4 +1,4 @@
-# Pokémon Red Renewed Version
+# Pokémon Red Revived Version
 
 Version 0.0.0
 
