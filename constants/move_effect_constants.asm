@@ -76,7 +76,7 @@ const_value = 0
 	const DEFENSE_DOWN_SIDE_EFFECT   ; $45
 	const SPEED_DOWN_SIDE_EFFECT     ; $46
 	const SPECIAL_DOWN_SIDE_EFFECT   ; $47
-	const UNUSED_EFFECT_48           ; $48
+	const ACCURACY_DOWN_SIDE_EFFECT  ; $48
 	const UNUSED_EFFECT_49           ; $49
 	const UNUSED_EFFECT_4A           ; $4A
 	const UNUSED_EFFECT_4B           ; $4B
@@ -91,6 +91,7 @@ const_value = 0
 	const LEECH_SEED_EFFECT          ; $54
 	const SPLASH_EFFECT              ; $55
 	const DISABLE_EFFECT             ; $56
+	const FLASH_EFFECT               ; $57
 
 ; fixed damage constants
 SONICBOOM_DAMAGE   EQU 20

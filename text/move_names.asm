@@ -163,5 +163,14 @@ MoveNames::
 	db "SUPER FANG@"
 	db "SLASH@"
 	db "SUBSTITUTE@"
+	;mc add new moves
+	db "BUG BITE@"
+	db "CROSS CHOP@"
+	db "DRAGONBREATH@"
+	db "ICY WIND@"
+	db "MUD SLAP@"
+	db "SHADOW BALL@"
+	db "SPARK@"
+	db "STONE EDGE@"
 	db "STRUGGLE@"
 

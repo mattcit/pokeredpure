@@ -19,6 +19,7 @@ ResidualEffects1:
 	db MIMIC_EFFECT
 	db LEECH_SEED_EFFECT
 	db SPLASH_EFFECT
+	db FLASH_EFFECT
 	db -1
 SetDamageEffects:
 ; moves that do damage but not through normal calculations
@@ -8156,7 +8157,7 @@ MoveEffectPointerTable:
 	 dw StatModifierDownEffect    ; DEFENSE_DOWN_SIDE_EFFECT
 	 dw StatModifierDownEffect    ; SPEED_DOWN_SIDE_EFFECT
 	 dw StatModifierDownEffect    ; SPECIAL_DOWN_SIDE_EFFECT
-	 dw StatModifierDownEffect    ; unused effect
+	 dw StatModifierDownEffect    ; ACCURACY_DOWN_SIDE_EFFECT
 	 dw StatModifierDownEffect    ; unused effect
 	 dw StatModifierDownEffect    ; unused effect
 	 dw StatModifierDownEffect    ; unused effect
@@ -8171,6 +8172,7 @@ MoveEffectPointerTable:
 	 dw LeechSeedEffect           ; LEECH_SEED_EFFECT
 	 dw SplashEffect              ; SPLASH_EFFECT
 	 dw DisableEffect             ; DISABLE_EFFECT
+	 dw FlashEffect               ; FLASH_EFFECT
 
 SleepEffect:
 	ld de, wEnemyMonStatus
@@ -8753,11 +8755,21 @@ StatModifierDownEffect:
 	call CheckTargetSubstitute ; can't hit through substitute
 	jp nz, MoveMissed
 	ld a, [de]
+	;mc added code to handle FLASH's 'accuracy down' side effect differently
+	; if FLASH is being used, skip the 'chance to fail' check
+	cp FLASH_EFFECT
+	jr c, .notFlash
+	; load ACCURACY_DOWN_SIDE_EFFECT as the move effect so accuracy will be lowered
+	ld a, ACCURACY_DOWN_SIDE_EFFECT
+	ld [wPlayerMoveEffect], a
+	jr .skipFailCheck
+.notFlash
 	cp ATTACK_DOWN_SIDE_EFFECT
 	jr c, .nonSideEffect
 	call BattleRandom
 	cp $55 ; 85/256 chance for side effects
 	jp nc, CantLowerAnymore
+.skipFailCheck
 	ld a, [de]
 	sub ATTACK_DOWN_SIDE_EFFECT ; map each stat to 0-3
 	jr .decrementStatMod
@@ -9401,8 +9413,12 @@ ConfusionSideEffectSuccess:
 	inc a
 	ld [bc], a ; confusion status will last 2-5 turns
 	pop af
+	;mc skip move animation if using FLASH
+	cp FLASH_EFFECT
+	jr z, .skipMoveAnimation
 	cp CONFUSION_SIDE_EFFECT
 	call nz, PlayCurrentMoveAnimation2
+.skipMoveAnimation
 	ld hl, BecameConfusedText
 	jp PrintText
 
@@ -9640,6 +9656,43 @@ DisableEffect:
 MoveWasDisabledText:
 	TX_FAR _MoveWasDisabledText
 	db "@"
+
+;mc custom move effect for FLASH (lower accuracy and confusion)
+FlashEffect:
+	; check for substitute
+	call CheckTargetSubstitute
+	jp nz, ConfusionEffectFailed
+
+	; check if move hits
+	call MoveHitTest
+	ld a, [wMoveMissed]
+	and a
+	jp nz, ConfusionEffectFailed
+
+	; play move animation
+	call PlayCurrentMoveAnimation2
+
+	; the next block of code is to prevent both the "enemy's accuracy has been lowered"
+	; and "but it failed" texts from displaying back to back
+	; if accuracy is down 5 (one away from the lowest) or higher, skip displaying confusion routine's "but it failed" text
+	ld a, [wEnemyMonAccuracyMod]
+	cp 2 ; 1 is the lowest (down 6), so 2 would be down 5
+	jr z, .skipConfusionFailedText ; accuracy mod is 2
+	jr nc, .skipConfusionFailedText ; accuracy mod is > 2
+	; if accuracy was already down all the way, just call ConfusionEffect
+	; --if enemy is already confused, it will say "but it failed"
+	call ConfusionSideEffectSuccess
+	ret
+.skipConfusionFailedText
+	; lower accuracy first
+	call StatModifierDownEffect
+	; change the current move effect to CONFUSION_SIDE_EFFECT before calling the confusion routine
+	; --this will skip displaying "but it failed" if enemy is already confused
+	ld a, CONFUSION_SIDE_EFFECT
+	ld [wPlayerMoveEffect], a
+	; now trigger confusion
+	call ConfusionSideEffectSuccess
+	ret
 
 PayDayEffect:
 	jpab PayDayEffect_

@@ -163,6 +163,15 @@ AttackAnimationPointers:
 	dw SuperFangAnim
 	dw SlashAnim
 	dw SubstituteAnim
+	;mc add new moves
+	dw BugBiteAnim
+	dw CrossChopAnim
+	dw DragonBreathAnim
+	dw IcyWindAnim
+	dw MudSlapAnim
+	dw ShadowBallAnim
+	dw SparkAnim
+	dw StoneEdgeAnim
 	dw StruggleAnim
 	dw ShowPicAnim
 	dw EnemyFlashAnim
@@ -218,6 +227,8 @@ StruggleAnim:
 	db $08,$00,$01
 	db $FF
 
+MudSlapAnim:
+CrossChopAnim:
 KarateChopAnim:
 	db $08,$01,$03
 	db $FF
@@ -285,6 +296,7 @@ CutAnim:
 	db $04,$FF,$16
 	db $FF
 
+IcyWindAnim:
 GustAnim:
 	db $46,$0F,$10
 	db $06,$FF,$02
@@ -433,6 +445,7 @@ LeerAnim:
 	db SE_RESET_SCREEN_PALETTE, $FF
 	db $FF
 
+BugBiteAnim:
 BiteAnim:
 	db $08,$2B,$02
 	db $FF
@@ -647,6 +660,7 @@ StringShotAnim:
 	db $08,$50,$37
 	db $FF
 
+DragonBreathAnim:
 DragonRageAnim:
 	db $46,$51,$1F
 	db $46,$FF,$0C
@@ -660,6 +674,7 @@ FireSpinAnim:
 	db $46,$FF,$0E
 	db $FF
 
+SparkAnim:
 ThunderShockAnim:
 	db $42,$53,$29
 	db $FF
@@ -888,6 +903,7 @@ SelfdestructAnim:
 	db $43,$77,$34
 	db $FF
 
+ShadowBallAnim:
 EggBombAnim:
 	db $44,$78,$41
 	db $44,$78,$42
@@ -1079,6 +1095,7 @@ RestAnim:
 	db $10,$9B,$3A
 	db $FF
 
+StoneEdgeAnim:
 RockSlideAnim:
 	db $04,$9C,$1D
 	db $03,$9C,$1E

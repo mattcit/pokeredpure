@@ -164,6 +164,15 @@ const_value = 1
 	const SUPER_FANG   ; a2
 	const SLASH        ; a3
 	const SUBSTITUTE   ; a4
+	;mc add new moves
+	const BUG_BITE
+	const CROSS_CHOP
+	const DRAGONBREATH
+	const ICY_WIND
+	const MUD_SLAP
+	const SHADOW_BALL
+	const SPARK
+	const STONE_EDGE
 
 NUM_ATTACKS EQU const_value + -1
 
