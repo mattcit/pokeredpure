@@ -17,11 +17,11 @@ Route11GateUpstairsScriptEnd:
 
 Route11GateUpstairsText2:
 	TX_ASM
-	CheckEvent EVENT_GOT_ITEMFINDER, 1
+	CheckEvent EVENT_GOT_EXP_ALL, 1
 	jr c, .asm_4949b
-	ld a, 30 ; pokemon needed
+	ld a, 20 ; pokemon needed
 	ld [hOaksAideRequirement], a
-	ld a, ITEMFINDER ; oak's aide reward
+	ld a, EXP_ALL ; oak's aide reward
 	ld [hOaksAideRewardItem], a
 	ld [wd11e], a
 	call GetItemName
@@ -34,7 +34,7 @@ Route11GateUpstairsText2:
 	ld a, [hOaksAideResult]
 	dec a
 	jr nz, .asm_494a1
-	SetEvent EVENT_GOT_ITEMFINDER
+	SetEvent EVENT_GOT_EXP_ALL
 .asm_4949b
 	ld hl, Route11GateUpstairsText_494a3
 	call PrintText

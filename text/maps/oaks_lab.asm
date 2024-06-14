@@ -398,8 +398,9 @@ _OaksLabText_4420b::
 _OaksLabText_44210::
 	text "Good, you're"
 	line "trying hard!"
-	cont "Get an ITEMFINDER"
-	cont "from my AIDE!"
+	cont "Be sure to get"
+	cont "EXP.ALL from my"
+	cont "AIDE!"
 	done
 
 _OaksLabText_44215::
@@ -411,9 +412,8 @@ _OaksLabText_44215::
 _OaksLabText_4421a::
 	text "You finally got at"
 	line "least 50 species!"
-	cont "Be sure to get"
-	cont "EXP.ALL from my"
-	cont "AIDE!"
+	cont "Get an ITEMFINDER"
+	cont "from my AIDE!"
 	done
 
 _OaksLabText_4421f::

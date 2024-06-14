@@ -1,15 +1,18 @@
 _Route11GateUpstairsText_494a3::
-	text "There are items on"
-	line "the ground that"
-	cont "can't be seen."
+	text "EXP.ALL gives"
+	line "EXP points to all"
+	cont "the #MON with"
+	cont "you, even if they"
+	cont "don't fight."
 
-	para "ITEMFINDER will"
-	line "detect an item"
-	cont "close to you."
+	para "It does, however,"
+	line "reduce the amount"
+	cont "of EXP for each"
+	cont "#MON."
 
-	para "It can't pinpoint"
-	line "it, so you have"
-	cont "to look yourself!"
+	para "If you don't need"
+	line "it, you should "
+	cont "store it via PC."
 	done
 
 _BinocularsSnorlaxText::
